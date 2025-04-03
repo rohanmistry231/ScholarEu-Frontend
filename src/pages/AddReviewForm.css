@@ -1,0 +1,252 @@
+/* Container for the entire component */
+.add-review-form {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main heading */
+.add-review-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.875rem; /* Matches text-3xl */
+  font-weight: 700; /* Matches font-bold */
+}
+
+/* Form sections */
+.add-review-form section {
+  margin-bottom: 15px;
+}
+
+/* Collapsible section header */
+.add-review-form h3 {
+  cursor: pointer;
+  background: #e9ecef;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.add-review-form h3:hover {
+  background: #dee2e6;
+}
+
+/* Form group (inputs) */
+.form-group {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Form labels and inputs */
+.form-group label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.submit-btn:disabled {
+  background: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #e6f0ff;
+  color: #0056b3;
+}
+
+.cancel-btn:disabled {
+  background: #f0f0f0;
+  color: #a0a0a0;
+  border-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Feedback message */
+.message {
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Review list section */
+.review-list {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.review-list h3 {
+  background: none;
+  cursor: default;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 1.25rem; /* Matches text-lg */
+  font-weight: 600; /* Matches font-semibold */
+  color: #333;
+}
+
+.review-list h3:hover {
+  background: none;
+}
+
+/* Individual review item */
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e5e7eb; /* Matches Tailwind border */
+  border-radius: 5px;
+  background: #fff;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.review-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Review content */
+.review-content {
+  flex-grow: 1;
+}
+
+.review-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.review-content p {
+  font-size: 0.875rem; /* Matches text-sm */
+  color: #6b7280; /* Matches text-muted-foreground */
+  margin-bottom: 5px;
+}
+
+.review-content img {
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+/* Action buttons (Edit/Delete) */
+.action-buttons {
+  display: flex;
+  gap: 8px; /* Matches space-x-2 */
+}
+
+.action-buttons button {
+  padding: 6px;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.action-buttons button:hover {
+  background: #e5e7eb; /* Matches hover:bg-gray-200 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .add-review-form {
+    padding: 15px;
+  }
+
+  .review-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
